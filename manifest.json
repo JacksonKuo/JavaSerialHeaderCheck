@@ -1,0 +1,10 @@
+{
+	"name": "birdBug",
+	"description" : "Checks for application/x-java-serialized-object",
+	"version": "1.0",
+	"manifest_version": 2,
+	"permissions": ["webRequest", "<all_urls>"],
+	"background": {
+		"scripts": ["background.js"]
+	}
+}
