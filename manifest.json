@@ -1,5 +1,5 @@
 {
-	"name": "birdBug",
+	"name": "java-serial-header-check",
 	"description" : "Checks for application/x-java-serialized-object",
 	"version": "1.0",
 	"manifest_version": 2,
