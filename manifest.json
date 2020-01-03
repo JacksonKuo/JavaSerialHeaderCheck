@@ -4,6 +4,9 @@
 	"version": "1.0",
 	"manifest_version": 2,
 	"permissions": ["webRequest", "<all_urls>"],
+	"browser_action": {
+		"default_icon": "shield-16-green.png"
+    },
 	"background": {
 		"scripts": ["background.js"]
 	}
