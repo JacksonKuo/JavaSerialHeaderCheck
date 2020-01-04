@@ -3,11 +3,12 @@
 	"description" : "Checks for application/x-java-serialized-object",
 	"version": "1.0",
 	"manifest_version": 2,
-	"permissions": ["webRequest", "<all_urls>"],
+	"permissions": ["webRequest", "<all_urls>", "storage"],
 	"browser_action": {
 		"default_icon": "shield-16-green.png"
     },
 	"background": {
 		"scripts": ["background.js"]
-	}
+	},
+	"options_page": "options.html"
 }

@@ -6,7 +6,22 @@ chrome.webRequest.onHeadersReceived.addListener(
 		for (x in headers) {
 			if (headers[x].name.includes("Content-Type") && headers[x].value.includes("application/x-java-serialized-object")) {
 			count++;
-			console.log("XJSO Check: " + details.url); 
+			
+			console.log("xjso check: " + details.url);
+			
+			chrome.storage.local.get({xjso: []}, function(result) {
+				var arr = []
+				arr = result.xjso;
+				
+				arr.push(details.url);
+				console.log('get value: ' + result.xjso);
+				
+				chrome.storage.local.set({xjso: arr}, function() {
+					console.log('set value: ' + details.url);
+				}); 
+			});
+			
+			
 			if ( count == 1 ) {
 				chrome.browserAction.setIcon( { path: { 16: "shield-16-red.png" } } );
 			}
